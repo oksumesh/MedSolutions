@@ -1,1 +1,67 @@
-<p>treatments works!</p>
+<!-- Our Treatments Section -->
+<div class="treatments-section">
+    <div class="treatment-banner">
+      <div class="treatment-banner-content">
+        <h2>We provide world class facility</h2>
+        <h1>Our treatments</h1>
+        <div class="treatment-info">
+          <span><mat-icon>medical_services</mat-icon></span>
+          <div>
+            <h4>Best treatment</h4>
+            <p>Specialist doctor</p>
+          </div>
+        </div>
+      </div>
+      <img src="../../assets/banner.png" alt="Doctor" class="doctor-image" />
+    </div>
+  </div>
+
+  <!-- Clinical Excellence Section -->
+<div class="clinical-excellence-section">
+    <div class="container">
+      <div class="excellence-content">
+        <div class="left-side">
+          <img src="assets/cardiac-patient.jpg" alt="Cardiac Treatment" class="excellence-img">
+          <div class="info-badge">
+            <mat-icon>favorite</mat-icon>
+            <span>One of the <strong>leading cardiac</strong> centres.</span>
+          </div>
+        </div>
+        <div class="right-side">
+          <h4>Clinical excellence</h4>
+          <h2>Best advanced infrastructure.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="navigation-buttons">
+            <button mat-icon-button>
+              <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specialist Treatments Section -->
+<div class="specialist-treatments-section">
+    <div class="container">
+      <!-- Section Title -->
+      <h2 class="section-title">Specialist treatments</h2>
+  
+      <!-- Treatments Grid -->
+      <div class="treatments-grid">
+        <!-- Use ngFor to loop through treatments array -->
+        <div *ngFor="let treatment of treatments" 
+             class="treatment-card">
+          <mat-icon>{{treatment.icon}}</mat-icon>
+          <h3>{{treatment.title}}</h3>
+          <p>{{treatment.description}}</p>
+        </div>
+      </div>
+      <div class="trust-section">
+        <p>Delivering tomorrow's health care for your family. <a href="#">View doctor’s timetable.</a></p>
+      </div>
+    </div>
+  </div>

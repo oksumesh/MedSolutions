@@ -1,1 +1,69 @@
-<p>timetable works!</p>
+<!-- Timetable Section -->
+<div class="timetable-section">
+    <div class="timetable-banner">
+        <div class="timetable-content">
+            <h4>Perfect time for visit</h4>
+            <h1>Timetable</h1>
+        </div>
+        <div class="icon-tag">
+            <mat-icon>event</mat-icon>
+            <div class="appointment-info">
+                <h4>Get appointment</h4>
+                <p>Special schedule</p>
+            </div>
+        </div>
+        <img src="../../assets/banner.png" alt="Doctor" class="doctor-image" />
+    </div>
+</div>
+
+<!-- Timetable Section -->
+<div class="timetable-section">
+    <!-- Filter Menu -->
+    <div class="filter-menu">
+      <button *ngFor="let filter of filters"
+        class="filter-btn" 
+        [class.active]="filter === currentFilter"
+        (click)="setFilter(filter)">
+        {{ filter }}
+      </button>
+    </div>
+  
+    <!-- Timetable Table -->
+    <div class="timetable-container">
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let slot of getFilteredTimetable()">
+            <td>{{ slot.time }}</td>
+            <td *ngIf="slot.Monday.dept">{{ slot.Monday.dept }}<br><span>{{ slot.Monday.doctor }}</span></td>
+            <td *ngIf="slot.Tuesday.dept">{{ slot.Tuesday.dept }}<br><span>{{ slot.Tuesday.doctor }}</span></td>
+            <td *ngIf="slot.Wednesday.dept">{{ slot.Wednesday.dept }}<br><span>{{ slot.Wednesday.doctor }}</span></td>
+            <td *ngIf="slot.Thursday.dept">{{ slot.Thursday.dept }}<br><span>{{ slot.Thursday.doctor }}</span></td>
+            <td *ngIf="slot.Friday.dept">{{ slot.Friday.dept }}<br><span>{{ slot.Friday.doctor }}</span></td>
+            <td *ngIf="slot.Saturday.dept">{{ slot.Saturday.dept }}<br><span>{{ slot.Saturday.doctor }}</span></td>
+            <td *ngIf="slot.Sunday.dept">{{ slot.Sunday.dept }}<br><span>{{ slot.Sunday.doctor }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <div class="contact-info">
+        <img src="assets/staff.png" alt="Staff Image" class="staff-image" />
+        <p>Please feel free to contact our friendly reception staff with any medical inquiry or call <strong>+1 234 567 8910</strong></p>
+      </div>
+      <button class="call-btn"><mat-icon>call</mat-icon> +1 234 567 8910</button>
+    </div>
+  </div>

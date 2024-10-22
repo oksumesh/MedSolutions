@@ -1,0 +1,191 @@
+/* Contact Us Section */
+.contact-us-section {
+    padding: 50px 0;
+    background-color: #f5fafd;
+  }
+  
+  .contact-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0f7fa;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .banner-content {
+    max-width: 50%;
+  }
+  
+  .banner-content h4 {
+    font-size: 18px;
+    color: #00bfa5;
+  }
+  
+  .banner-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .info mat-icon {
+    font-size: 36px;
+    color: #ff6f61;
+    margin-right: 10px;
+  }
+  
+  .info div {
+    line-height: 1.4;
+  }
+  
+  .doctor-image {
+    width: 30%;
+    border-radius: 15px;
+    margin-bottom: -40px;
+  }
+
+  /* Contact Info Section */
+.contact-info-section {
+    padding: 50px 0;
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-item {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .contact-item mat-icon {
+    font-size: 36px;
+    color: #00bfa5;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Map Section */
+  .map-container {
+    height: 500px;
+    position: relative;
+  }
+  
+  .map-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+  }
+
+  /* FAQ and Opening Hours Section */
+.faq-opening-section {
+    padding: 50px 20px;
+  }
+  
+  .faq-opening-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .faq-section {
+    width: 60%;
+  }
+  
+  .faq-header {
+    margin-bottom: 20px;
+  }
+  
+  .faq-header mat-icon {
+    font-size: 36px;
+    color: #00bfa5;
+  }
+  
+  .faq-header h4 {
+    color: #00bfa5;
+    font-size: 18px;
+  }
+  
+  .faq-header h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+  
+  .faq-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .faq-item p {
+    font-size: 14px;
+    color: #666;
+    display: none;
+  }
+  
+  .faq-item.active p {
+    display: block;
+  }
+  
+  .faq-item.active h3 span {
+    transform: rotate(45deg);
+  }
+  
+  /* Opening Hours */
+  .opening-hours {
+    width: 35%;
+    background-color: #f5fafd;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .hours-header mat-icon {
+    font-size: 36px;
+    color: #00bfa5;
+    margin-bottom: 10px;
+  }
+  
+  .hours-header h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hours-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hours-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }

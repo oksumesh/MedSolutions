@@ -21,12 +21,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatExpansionModule } from '@angular/material/expansion';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import { HomeHeroComponent } from './home/home-hero/home-hero.component';
 import { HomeAboutComponent } from './home/home-about/home-about.component';
 import { HomeServiceComponent } from './home/home-service/home-service.component';
 import { HomeDoctorsComponent } from './home/home-doctors/home-doctors.component';
 import { HomeAppointmentComponent } from './home/home-appointment/home-appointment.component';
+import { BookAppointmentComponent } from './shared/book-appointment/book-appointment.component';
 
 
 
@@ -46,7 +48,8 @@ import { HomeAppointmentComponent } from './home/home-appointment/home-appointme
     HomeAboutComponent,
     HomeServiceComponent,
     HomeDoctorsComponent,
-    HomeAppointmentComponent
+    HomeAppointmentComponent,
+    BookAppointmentComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,7 @@ import { HomeAppointmentComponent } from './home/home-appointment/home-appointme
     MatToolbarModule, 
     MatButtonModule, 
     MatIconModule,
-    MatCardModule,MatSelectModule,MatInputModule,MatFormFieldModule,MatDatepickerModule
+    MatCardModule,MatSelectModule,MatInputModule,MatFormFieldModule,MatDatepickerModule,MatExpansionModule
   ],
   providers: [
     provideAnimationsAsync(),provideNativeDateAdapter()
