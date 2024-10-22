@@ -1,7 +1,291 @@
 <div class="home-page">
-  <app-home-hero></app-home-hero>
-  <app-home-about></app-home-about>
-  <app-home-service></app-home-service>
-  <app-home-doctors></app-home-doctors>
-  <app-home-appointment></app-home-appointment>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Most trusted health partner for your life.</h1>
+        <p>Tell us your problem!</p>
+        <div class="action-buttons">
+          <button mat-raised-button color="primary">Find a Doctor</button>
+          <button mat-raised-button color="accent">Video Call</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../../assets/banner.png" alt="Doctor" class="doctor-image" />
+        <div class="verified-tag">
+          <mat-card class="verified-card">
+            <div class="icon-and-text">
+              <mat-icon>favorite</mat-icon>
+              <div class="verified-text">
+                <mat-card-content style="padding: 0"
+                  >Verified doctors</mat-card-content
+                >
+                <mat-card-subtitle>Professional doctor</mat-card-subtitle>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About Section -->
+  <div class="about-section">
+    <div class="container about-hospital-content">
+      <!-- Left side with images -->
+      <div class="about-hospital-images">
+        <img
+          src="../../assets/doc1.jpg"
+          alt="Doctors"
+          class="doctor-group-image"
+        />
+      </div>
+
+      <!-- Right side with text and buttons -->
+      <div class="about-hospital-text">
+        <h2>Welcome to our Medcare hospital.</h2>
+        <p>
+          We value each and every human life placed in our hands and constantly
+          work towards meeting the expectations of our customers and
+          stakeholders.
+        </p>
+        <div class="stats">
+          <div class="stat-item">
+            <h3>722+</h3>
+            <p>5 star reviews from our satisfied people.</p>
+          </div>
+        </div>
+        <div class="about-buttons">
+          <button mat-raised-button color="primary">About Hospital</button>
+          <button mat-raised-button>Check Timetable</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="services-section">
+    <div class="container">
+      <!-- Left Section: Heading and Text -->
+      <div class="row">
+        <div class="col-md-5 service-intro">
+          <p class="services-subtitle">Our advanced services</p>
+          <h2 class="services-title">Our Clinical Departments</h2>
+          <p class="services-description">
+            Lorem ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button mat-raised-button color="primary">All Treatments</button>
+        </div>
+        <!-- Right Section: Department Cards -->
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-md-4 mb-3 department-card">
+              <mat-card>
+                <mat-card-header>General Surgery</mat-card-header>
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum is simply dummy text of printing and typesetting
+                    industry.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Know more</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col-md-4 mb-3 department-card">
+              <mat-card>
+                <mat-card-header>Blood Test</mat-card-header>
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum is simply dummy text of printing and typesetting
+                    industry.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Know more</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col-md-4 mb-3 department-card">
+              <mat-card>
+                <mat-card-header>Cardiology</mat-card-header>
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum is simply dummy text of printing and typesetting
+                    industry.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Know more</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="row stats">
+        <div class="col-md-4">
+          <h3>4.98</h3>
+          <p>2,488 rating</p>
+        </div>
+        <div class="col-md-4">
+          <h3>98%</h3>
+          <p>Genuine positive feedback</p>
+        </div>
+        <div class="col-md-4">
+          <h3>200+</h3>
+          <p>Daily patients consulted</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qualified Doctors Section -->
+  <div class="qualified-doctors-section">
+    <div class="container">
+      <!-- Steps above -->
+      <div class="steps-flow">
+        <div class="step">
+          <h3>01</h3>
+          <p>Search doctor</p>
+        </div>
+        <div class="step">
+          <h3>02</h3>
+          <p>Book schedule</p>
+        </div>
+        <div class="step">
+          <h3>03</h3>
+          <p>Make a payment</p>
+        </div>
+      </div>
+
+      <!-- Section title -->
+      <h2 class="section-title">Qualified Doctors</h2>
+
+      <!-- Doctor Cards -->
+      <div class="doctor-cards">
+        <div *ngFor="let doctor of doctors" class="doctor-card">
+          <img [src]="doctor.img" [alt]="doctor.name" class="doctor-img" />
+          <h3>{{ doctor.name }}</h3>
+          <p class="specialty">
+            Specialize in <span>{{ doctor.specialty }}</span>
+          </p>
+          <div class="rating-badge">{{ doctor.rating }}</div>
+          <p>{{ doctor.description }}</p>
+          <div class="social-icons">
+            <a [href]="doctor.social.facebook" target="_blank"
+              ><mat-icon>facebook</mat-icon></a
+            >
+            <a [href]="doctor.social.twitter" target="_blank"
+              ><mat-icon>twitter</mat-icon></a
+            >
+            <a [href]="doctor.social.instagram" target="_blank"
+              ><mat-icon>instagram</mat-icon></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust section -->
+      <div class="trust-section">
+        <span class="trust-badge">TRUST</span>
+        <p>Genuine 10000+ people trusting medcare hospital treatment.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Appointment Section -->
+  <div class="appointment-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side: Text and Contact Info -->
+        <div class="col-md-6 contact-info">
+          <h2>Request an Appointment</h2>
+          <p>
+            Your information will be forwarded to a scheduling specialist who
+            will contact you.
+          </p>
+          <div class="d-flex align-items-center mt-3">
+            <img
+              src="assets/demo-medical-home-05.png"
+              class="me-3"
+              alt="Urgent Contact"
+            />
+            <div>
+              <p>For urgent matters</p>
+              <h3>+1 234 567 8910</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="col-md-6 appointment-form">
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Patient's full name*</mat-label>
+                  <input matInput placeholder="Full Name" required />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Patient's email*</mat-label>
+                  <input matInput type="email" placeholder="Email" required />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Select Doctor</mat-label>
+                  <mat-select>
+                    <mat-option
+                      *ngFor="let doctor of doctors"
+                      [value]="doctor"
+                      >{{ doctor }}</mat-option
+                    >
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Appointment Date</mat-label>
+                  <input
+                    matInput
+                    [matDatepicker]="picker"
+                    placeholder="Choose a date"
+                  />
+                  <mat-datepicker-toggle
+                    matSuffix
+                    [for]="picker"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Appointment Time</mat-label>
+                  <input matInput type="time" placeholder="Time" />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your message</mat-label>
+                  <textarea matInput placeholder="Your message"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <button mat-raised-button color="primary" class="w-100">
+              Book Appointment
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

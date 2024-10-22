@@ -8,29 +8,52 @@ import { Component } from '@angular/core';
 export class DoctorsComponent {
   doctors = [
     {
-      name: 'Dr. Evan Thomson',
-      speciality: 'psychiatry',
-      hospital: 'Crafto hospital',
-      rating: '4.9',
-      image: 'assets/doc1.jpg',
+      img: 'assets/doc1.jpg',
+      name: 'Dr. Shoko Mugikura',
+      specialty: 'psychiatry',
+      rating: 4.9,
+      description: 'Specialize in psychiatry at sumesh hospital.',
       social: {
-        facebook: 'https://facebook.com/evan',
-        twitter: 'https://twitter.com/evan',
-        instagram: 'https://instagram.com/evan'
-      }
+        facebook: 'https://facebook.com/shoko',
+        twitter: 'https://twitter.com/shoko',
+        instagram: 'https://instagram.com/shoko',
+      },
     },
     {
-      name: 'Dr. Bryan Johnson',
-      speciality: 'cancer',
-      hospital: 'Crafto hospital',
-      rating: '4.7',
-      image: 'assets/doc2.jpg',
+      img: 'assets/doc2.jpg',
+      name: 'Dr. Herman Miller',
+      specialty: 'cancer',
+      rating: 4.7,
+      description: 'Specialize in cancer at sumesh hospital.',
       social: {
-        facebook: 'https://facebook.com/bryan',
-        twitter: 'https://twitter.com/bryan',
-        instagram: 'https://instagram.com/bryan'
-      }
+        facebook: 'https://facebook.com/herman',
+        twitter: 'https://twitter.com/herman',
+        instagram: 'https://instagram.com/herman',
+      },
     },
-    // Add other doctors here
+    {
+      img: 'assets/doc3.jpg',
+      name: 'Dr. Leonel Mooney',
+      specialty: 'pediatrics',
+      rating: 5.0,
+      description: 'Specialize in pediatrics at sumesh hospital.',
+      social: {
+        facebook: 'https://facebook.com/leonel',
+        twitter: 'https://twitter.com/leonel',
+        instagram: 'https://instagram.com/leonel',
+      },
+    },
+    {
+      img: 'assets/doc4.jpg',
+      name: 'Dr. Matthew Taylor',
+      specialty: 'psychiatry',
+      rating: 5.0,
+      description: 'Specialize in psychiatry at sumesh hospital.',
+      social: {
+        facebook: 'https://facebook.com/matthew',
+        twitter: 'https://twitter.com/matthew',
+        instagram: 'https://instagram.com/matthew',
+      },
+    },
   ];
 }
