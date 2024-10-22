@@ -1,23 +1,13 @@
 /* Hero Section */
 .hero-section {
-    background-color: #f5fafd;
     padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
+    background-color: #f5fafd;
+    position: relative;
 }
 
 .hero-text {
-    flex: 1;
-    max-width: 600px;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .hero-text h1 {
@@ -34,27 +24,21 @@
 .action-buttons button {
     margin-right: 10px;
     padding: 10px 30px;
-    font-size: 16px;
     border-radius: 25px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     position: relative;
 }
 
 .doctor-image {
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
-    border-radius: 50%;
 }
 
 .verified-tag {
-    position: absolute;
     bottom: 0;
     right: -30px;
     background-color: #ffffff;
@@ -64,88 +48,73 @@
 }
 
 .verified-card {
-    display: flex;
-    align-items: center;
     background-color: #ffffff;
     border-radius: 8px;
     padding: 10px;
 }
 
-.icon-and-text {
-    display: flex;
-    align-items: center;
-}
-
-.verified-card mat-icon {
+.icon-and-text mat-icon {
     font-size: 24px;
     color: #00bfa5;
     margin-right: 10px;
 }
 
-.verified-text mat-card-content {
-    font-size: 16px;
-    font-weight: bold;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .verified-tag {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+    }
 }
 
-.verified-text mat-card-subtitle {
-    font-size: 12px;
-    color: #666;
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
 }
 
 /* About Hospital Section */
 .about-section {
     padding: 60px 20px;
-    display: flex;
-    justify-content: center;
+    background-color: #f9f9f9;
   }
   
   .about-hospital-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
-    width: 100%;
+    margin: 0 auto;
   }
   
   .about-hospital-images {
-    position: relative;
+    text-align: center;
   }
   
   .doctor-group-image {
-    max-width: 300px;
-    height: auto;
+    max-width: 100%;
     border-radius: 8px;
-  }
-  
-  .doctor-image-small {
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px;
-    position: absolute;
-    top: 80px;
-    right: -60px;
-  }
-  
-  .badge {
-    position: absolute;
-    bottom: -30px;
-    left: 20px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 20px;
-    font-size: 14px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-hospital-text {
-    flex: 1;
-    padding-left: 40px;
   }
   
   .about-hospital-text h2 {
     font-size: 36px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
   
   .about-hospital-text p {
@@ -162,7 +131,6 @@
   .stat-item h3 {
     font-size: 36px;
     color: #ffcc00;
-    margin-right: 10px;
   }
   
   .stat-item p {
@@ -171,148 +139,178 @@
   }
   
   .about-buttons button {
-    margin-right: 10px;
+    border-radius: 25px;
     padding: 12px 30px;
     font-size: 16px;
-    border-radius: 25px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .about-hospital-text h2 {
+      font-size: 30px;
+    }
+  
+    .about-hospital-text p {
+      font-size: 16px;
+    }
+  
+    .stat-item h3 {
+      font-size: 28px;
+    }
+  
+    .stat-item p {
+      font-size: 12px;
+    }
+  
+    .about-buttons {
+      flex-direction: column;
+    }
+  
+    .about-buttons button {
+      margin-bottom: 10px;
+      width: 100%;
+    }
   }
 
   /* Services Section Styling */
 .services-section {
     background-color: #eaf4f7;
     padding: 60px 20px;
-}
-
-.service-intro {
+  }
+  
+  .service-intro {
     text-align: left;
     padding-right: 20px;
-}
-
-.services-subtitle {
+  }
+  
+  .services-subtitle {
     color: #00bfa5;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.services-title {
+  }
+  
+  .services-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.services-description {
+  }
+  
+  .services-description {
     margin-bottom: 30px;
     color: #666;
-}
-
-.department-card mat-card {
+  }
+  
+  /* Department Cards */
+  .department-card mat-card {
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.department-card mat-card-header {
+  }
+  
+  .department-card mat-card-header {
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.stats {
+  }
+  
+  /* Stats Section */
+  .stats {
     margin-top: 40px;
-    text-align: center;
-}
-
-.stats h3 {
+  }
+  
+  .stats h3 {
     font-size: 24px;
     font-weight: bold;
-}
-
-.stats p {
+  }
+  
+  .stats p {
     color: #666;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .service-intro {
-        text-align: center;
-        padding-right: 0;
+      text-align: center;
+      padding-right: 0;
     }
-
+  
     .department-card {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-}
+  
+    .stats {
+      text-align: center;
+    }
+  }
 
 /* Qualified Doctors Section */
 .qualified-doctors-section {
     background-color: #f5fafd;
     padding: 60px 20px;
     text-align: center;
-}
-
-/* Steps Flow */
-.steps-flow {
+  }
+  
+  /* Steps Flow */
+  .steps-flow {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-bottom: 40px;
-}
-
-.step {
+  }
+  
+  .step {
     text-align: center;
-}
-
-.step h3 {
+  }
+  
+  .step h3 {
     font-size: 24px;
     color: #333;
-}
-
-.step p {
+  }
+  
+  .step p {
     font-size: 16px;
     color: #666;
-}
-
-/* Section Title */
-.section-title {
+  }
+  
+  /* Section Title */
+  .section-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 40px;
     color: #333;
-}
-
-/* Doctor Cards */
-.doctor-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.doctor-card {
-    padding: 30px; /* More padding for spaciousness */
+  }
+  
+  /* Doctor Cards */
+  .doctor-card {
+    padding: 30px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 270px; /* Increased width slightly */
     text-align: center;
-}
-
-.doctor-img {
+    transition: all 0.3s ease;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .doctor-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 15px;
-}
-
-.doctor-card h3 {
-    font-size: 22px; /* Slightly larger name */
+  }
+  
+  .doctor-card h3 {
+    font-size: 22px;
     color: #333;
-}
-
-.specialty span {
+  }
+  
+  .specialty span {
     color: #00c0ff;
-}
-
-.rating-badge {
+  }
+  
+  .rating-badge {
     background-color: #ffd700;
     color: #333;
     border-radius: 12px;
@@ -320,30 +318,28 @@
     padding: 5px 10px;
     margin-top: 10px;
     font-weight: bold;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
+  }
+  
+  .social-icons {
     gap: 15px;
     margin-top: 10px;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     font-size: 20px;
     color: #333;
-}
-
-.social-icons a:hover {
+  }
+  
+  .social-icons a:hover {
     color: #00c0ff;
-}
-
-/* Trust Section */
-.trust-section {
+  }
+  
+  /* Trust Section */
+  .trust-section {
     margin-top: 40px;
-}
-
-.trust-badge {
+  }
+  
+  .trust-badge {
     background-color: #00c0ff;
     color: white;
     border-radius: 12px;
@@ -351,13 +347,29 @@
     font-size: 14px;
     font-weight: bold;
     margin-right: 10px;
-}
-
-.trust-section p {
+  }
+  
+  .trust-section p {
     font-size: 16px;
     color: #666;
     display: inline;
-}
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .steps-flow {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .doctor-cards {
+      justify-content: center;
+    }
+    
+    .doctor-card {
+      margin-bottom: 20px;
+    }
+  }
 
 /* Appointment Section */
 .appointment-section {

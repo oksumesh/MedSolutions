@@ -1,8 +1,9 @@
 <mat-toolbar color="primary" class="header-toolbar">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
     <a class="navbar-brand" href="#">
-        <img src="assets/logo-black.png" alt="Medcare Logo" class="logo">
-      </a>
-    <nav>
+      <img src="assets/logo-black.png" alt="Medcare Logo" class="logo">
+    </a>
+    <nav class="d-none d-md-flex">
       <a mat-button routerLink="/">Home</a>
       <a mat-button routerLink="/about">About</a>
       <a mat-button routerLink="/treatments">Treatments</a>
@@ -10,5 +11,22 @@
       <a mat-button routerLink="/timetable">Timetable</a>
       <a mat-button routerLink="/contact">Contact</a>
     </nav>
-    <button mat-raised-button color="accent" class="book-online-btn" routerLink="/book-appointment">Book Online</button>
-  </mat-toolbar>
+    <button mat-raised-button color="accent" class="book-online-btn d-none d-md-block" routerLink="/book-appointment">Book Online</button>
+
+    <!-- Responsive Toggle for mobile -->
+    <button mat-icon-button class="d-md-none" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu d-md-none" [class.active]="menuOpen">
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="/about">About</a>
+    <a mat-button routerLink="/treatments">Treatments</a>
+    <a mat-button routerLink="/doctors">Doctors</a>
+    <a mat-button routerLink="/timetable">Timetable</a>
+    <a mat-button routerLink="/contact">Contact</a>
+    <button mat-raised-button color="accent" routerLink="/book-appointment">Book Online</button>
+  </div>
+</mat-toolbar>
