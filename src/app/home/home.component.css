@@ -1,4 +1,7 @@
 /* Hero Section */
+.home-page{
+  padding: 60px 20px;
+}
 .hero-section {
     padding: 60px 20px;
     background-color: #f5fafd;
@@ -35,7 +38,7 @@
 
 .doctor-image {
     max-width: 100%;
-    height: auto;
+    height: 500px
 }
 
 .verified-tag {
@@ -74,11 +77,13 @@
     }
 
     .verified-tag {
-        right: auto;
-        left: 50%;
         transform: translateX(-50%);
         bottom: -20px;
     }
+    .doctor-image {
+      max-width: 100%;
+      height: auto
+  }
 }
 
 @media (max-width: 576px) {
@@ -89,6 +94,10 @@
     .hero-text p {
         font-size: 16px;
     }
+    .doctor-image {
+      max-width: 100%;
+      height: auto
+  }
 }
 
 /* About Hospital Section */
@@ -231,7 +240,7 @@
   @media (max-width: 768px) {
     .service-intro {
       text-align: center;
-      padding-right: 0;
+      margin-bottom: 30px;
     }
   
     .department-card {
@@ -245,131 +254,152 @@
 
 /* Qualified Doctors Section */
 .qualified-doctors-section {
-    background-color: #f5fafd;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  /* Steps Flow */
+  background-color: #f5fafd;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Steps Flow */
+/* Steps Section */
+.steps-flow {
+  background-color: #55c3d1; /* Match the background color */
+  padding: 40px;
+  border-radius: 12px; /* Rounded corners */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.step h3 {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #55c3d1;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Optional: Media query to ensure responsiveness */
+@media (max-width: 768px) {
   .steps-flow {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-  
-  .step {
-    text-align: center;
-  }
-  
-  .step h3 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .step p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  /* Section Title */
-  .section-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
-  /* Doctor Cards */
-  .doctor-card {
-    padding: 30px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .doctor-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .doctor-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  .doctor-card h3 {
-    font-size: 22px;
-    color: #333;
-  }
-  
-  .specialty span {
-    color: #00c0ff;
-  }
-  
-  .rating-badge {
-    background-color: #ffd700;
-    color: #333;
-    border-radius: 12px;
-    display: inline-block;
-    padding: 5px 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .social-icons {
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  .social-icons a {
-    font-size: 20px;
-    color: #333;
-  }
-  
-  .social-icons a:hover {
-    color: #00c0ff;
-  }
-  
-  /* Trust Section */
-  .trust-section {
-    margin-top: 40px;
-  }
-  
-  .trust-badge {
-    background-color: #00c0ff;
-    color: white;
-    border-radius: 12px;
-    padding: 5px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .trust-section p {
-    font-size: 16px;
-    color: #666;
-    display: inline;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .steps-flow {
       flex-direction: column;
       gap: 20px;
-    }
-  
-    .doctor-cards {
-      justify-content: center;
-    }
-    
-    .doctor-card {
-      margin-bottom: 20px;
-    }
   }
+}
+
+/* Section Title */
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Doctor Cards */
+.doctor-card {
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.doctor-card h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+.specialty span {
+  color: #00c0ff;
+}
+
+.rating-badge {
+  background-color: #ffd700;
+  color: #333;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin: 10px auto; /* Horizontal centering */
+  font-weight: bold;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #333;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  color: #00c0ff;
+}
+
+/* Trust Section */
+.trust-section {
+  margin-top: 40px;
+}
+
+.trust-badge {
+  background-color: #00c0ff;
+  color: white;
+  border-radius: 12px;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trust-section p {
+  display: inline;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .steps-flow {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .doctor-card {
+    margin-bottom: 20px;
+  }
+
+  .trust-section {
+    text-align: center;
+  }
+}
 
 /* Appointment Section */
 .appointment-section {

@@ -17,7 +17,7 @@
         <div class="verified-tag position-absolute">
           <mat-card class="verified-card">
             <div class="icon-and-text d-flex align-items-center">
-              <mat-icon>favorite</mat-icon>
+              <mat-icon>check_circle</mat-icon>
               <div class="verified-text">
                 <mat-card-content>Verified doctors</mat-card-content>
                 <mat-card-subtitle>Professional doctor</mat-card-subtitle>
@@ -139,7 +139,7 @@
   <!-- Qualified Doctors Section -->
   <div class="qualified-doctors-section">
     <div class="container">
-      <!-- Steps above -->
+      <!-- Steps above (left unchanged) -->
       <div class="row steps-flow">
         <div class="col-lg-4 col-md-4 col-sm-12 step">
           <h3>01</h3>
@@ -160,15 +160,19 @@
   
       <!-- Doctor Cards -->
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let doctor of doctors">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let doctor of doctors">
           <div class="doctor-card">
             <img [src]="doctor.img" [alt]="doctor.name" class="doctor-img img-fluid" />
             <h3>{{ doctor.name }}</h3>
             <p class="specialty">Specialize in <span>{{ doctor.specialty }}</span></p>
-            <div class="rating-badge">{{ doctor.rating }}</div>
+            <div class="rating-badge">
+              <mat-icon>star</mat-icon> {{ doctor.rating }}
+            </div>
             <p>{{ doctor.description }}</p>
             <div class="social-icons d-flex justify-content-center">
               <a [href]="doctor.social.facebook" target="_blank"><mat-icon>facebook</mat-icon></a>
+              <a [href]="doctor.social.twitter" target="_blank"><mat-icon>twitter</mat-icon></a>
+              <a [href]="doctor.social.instagram" target="_blank"><mat-icon>instagram</mat-icon></a>
             </div>
           </div>
         </div>
