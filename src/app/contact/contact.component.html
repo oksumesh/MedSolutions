@@ -12,83 +12,59 @@
   ></app-banner>
 
   <!-- Contact Info Section -->
-  <div class="contact-info-section">
-    <div class="container">
-      <div class="contact-details">
-        <div class="contact-item">
-          <mat-icon>location_on</mat-icon>
-          <h4>Hospital location</h4>
-          <p>27 Eden walk eden center,<br />Orchard view, Paris, France</p>
+  <div class="contact-info-section container-fluid">
+    <div class="row align-items-center">
+        <!-- Contact Details Section -->
+        <div class="col-lg-6 col-md-12">
+            <div class="row">
+                <div class="col-md-6 contact-item text-center" *ngFor="let detail of contactDetails">
+                    <mat-icon>{{ detail.icon }}</mat-icon>
+                    <h4>{{ detail.title }}</h4>
+                    <p [innerHTML]="detail.content"></p>
+                </div>
+            </div>
         </div>
-        <div class="contact-item">
-          <mat-icon>email</mat-icon>
-          <h4>Email address</h4>
-          <p>infoyourdomain.com<br />hryourdomain.com</p>
-        </div>
-        <div class="contact-item">
-          <mat-icon>phone</mat-icon>
-          <h4>Let's talk with us</h4>
-          <p>Phone: 1-800-222-000<br />Fax: 1-800-222-002</p>
-        </div>
-        <div class="contact-item">
-          <mat-icon>work</mat-icon>
-          <h4>Doctor consulting</h4>
-          <p>Lorem ipsum is simply the printing typesetting.</p>
-        </div>
+        <!-- Map Section -->
+        <div class="col-lg-6 col-md-12 map-container">
+          <iframe
+              src="https://maps.google.com/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              class="map-frame"
+          ></iframe>
       </div>
     </div>
-
-    <!-- Map Section -->
-    <div class="map-container">
-      <iframe
-        src="https://maps.google.com/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        frameborder="0"
-        class="map-frame"
-      ></iframe>
-    </div>
-  </div>
+</div>
 
   <!-- FAQ and Opening Hours Section -->
-  <div class="faq-opening-section">
-    <div class="container">
-      <div class="faq-opening-grid">
-        <!-- FAQ Section -->
-        <div class="faq-section">
-          <div class="faq-header">
-            <mat-icon>help</mat-icon>
-            <h4>Basic information for patients</h4>
-            <h2>We're here to help.</h2>
-          </div>
-
-          <!-- FAQ Items -->
-          <div class="faq-item active">
-            <h3>What happens if I need to go to a hospital? <span>−</span></h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div class="faq-item">
-            <h3>See your claims, check on coverage and more? <span>+</span></h3>
-          </div>
-          <div class="faq-item">
-            <h3>Easy access more mental health providers? <span>+</span></h3>
-          </div>
+  <div class="faq-opening-section container-fluid">
+    <div class="row">
+      
+      <!-- FAQ Section -->
+      <div class="col-lg-7 col-md-12 faq-section">
+        <div class="faq-header">
+          <mat-icon>help</mat-icon>
+          <h4>Basic information for patients</h4>
+          <h2>We're here to help.</h2>
         </div>
-
-        <!-- Opening Hours Section -->
-        <div class="opening-hours">
-          <div class="hours-header">
-            <mat-icon>schedule</mat-icon>
-            <h4>Hospital opening hours</h4>
-          </div>
-          <ul class="hours-list">
-            <li><strong>Monday - Wednesday:</strong> 08:00 AM - 20:00 PM</li>
-            <li><strong>Thursday - Friday:</strong> 08:00 AM - 20:00 PM</li>
-            <li><strong>Saturday:</strong> 08:00 AM - 12:00 PM</li>
-            <li><strong>Sunday:</strong> Closed</li>
-          </ul>
+  
+        <!-- Dynamic FAQ Items -->
+        <div *ngFor="let faq of faqItems" class="faq-item" [class.active]="faq.isActive">
+          <h3>{{ faq.question }} <span>{{ faq.isActive ? '−' : '+' }}</span></h3>
+          <p *ngIf="faq.isActive">{{ faq.answer }}</p>
         </div>
+      </div>
+  
+      <!-- Opening Hours Section -->
+      <div class="col-lg-5 col-md-12 opening-hours">
+        <div class="hours-header">
+          <mat-icon>schedule</mat-icon>
+          <h4>Hospital opening hours</h4>
+        </div>
+        <ul class="hours-list">
+          <li *ngFor="let hour of openingHours">
+            <strong>{{ hour.day }}:</strong> {{ hour.time }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
