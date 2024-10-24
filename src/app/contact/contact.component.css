@@ -53,15 +53,15 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .map-container, .contact-details {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .contact-item {
-      text-align: left;
+    text-align: left;
   }
 }
 
- /* FAQ and Opening Hours Section */
+/* FAQ and Opening Hours Section */
 .faq-opening-section {
   padding: 50px 20px;
 }
@@ -151,26 +151,26 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .faq-header h2 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .faq-header h4 {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .faq-item h3 {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .hours-header h4 {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .hours-list li {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .opening-hours {
-      margin-top: 30px;
+    margin-top: 30px;
   }
 }
