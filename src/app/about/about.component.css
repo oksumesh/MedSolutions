@@ -36,6 +36,9 @@
 .hospital-info mat-icon {
   color: #ff6f61;
   margin-right: 10px;
+  height: fit-content;
+    width: fit-content;
+    font-size: 40px;
 }
 
 .hospital-info div {
