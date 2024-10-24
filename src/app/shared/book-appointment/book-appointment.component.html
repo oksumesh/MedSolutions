@@ -1,77 +1,96 @@
 <!-- Book Appointment Section -->
-<div class="book-appointment-section">
-    <div class="appointment-banner">
-      <div class="appointment-banner-content">
-        <h2>Perfect time for visit</h2>
-        <h1>Book appointment</h1>
-        <div class="treatment-info">
-          <span><mat-icon>home</mat-icon></span>
-          <div>
-            <h4>Best treatment</h4>
-            <p>Specialist doctor</p>
-          </div>
-        </div>
-      </div>
-      <img src="../../assets/banner.png" alt="Doctor" class="appointment-image" />
-    </div>
-  </div>
+<div class="appointment-section-main">
+  <app-banner
+    title="Book appointment"
+    subtitle="Perfect time for visit"
+    icon="home"
+    infoTitle="Best treatment"
+    infoSubtitle="Specialist doctor"
+    bannerImage="../../assets/banner.png"
+    verifiedText="Best treatment"
+    verifiedSubtitle="Specialist doctor"
+  >
+  </app-banner>
 
   <!-- Icon Feature Section -->
-<div class="icon-feature-section">
+  <div class="icon-feature-section">
     <div class="container">
       <div class="feature-item">
-        <img src="../../../assets/img/appointment/professional-doctor.png" alt="Professional Doctors" class="feature-icon">
+        <img
+          src="../../../assets/img/appointment/professional-doctor.png"
+          alt="Professional Doctors"
+          class="feature-icon"
+        />
         <p>Professional doctors</p>
       </div>
       <div class="feature-item">
-        <img src="../../../assets/img/appointment/patient-support.png" alt="24/7 Patient Support" class="feature-icon">
+        <img
+          src="../../../assets/img/appointment/patient-support.png"
+          alt="24/7 Patient Support"
+          class="feature-icon"
+        />
         <p>24/7 Patient support</p>
       </div>
       <div class="feature-item">
-        <img src="../../../assets/img/appointment/family-medicine.png" alt="Family Medicine" class="feature-icon">
+        <img
+          src="../../../assets/img/appointment/family-medicine.png"
+          alt="Family Medicine"
+          class="feature-icon"
+        />
         <p>Family medicine</p>
       </div>
       <div class="feature-item">
-        <img src="../../../assets/img/appointment/red-support.png" alt="24/7 Patient Support" class="feature-icon">
+        <img
+          src="../../../assets/img/appointment/red-support.png"
+          alt="24/7 Patient Support"
+          class="feature-icon"
+        />
         <p>24/7 Patient support</p>
       </div>
     </div>
   </div>
 
-<!-- Appointment Section -->
-<div class="appointment-section">
+  <!-- Appointment Section -->
+  <div class="appointment-section">
     <h2>Book an appointment</h2>
-    
+
     <!-- Appointment Form -->
     <form class="appointment-form">
       <!-- First row: Full name and Email -->
       <div class="form-row">
         <mat-form-field appearance="fill" class="form-group">
           <mat-label>Patient's full name*</mat-label>
-          <input matInput placeholder="Enter full name">
+          <input matInput placeholder="Enter full name" />
         </mat-form-field>
-  
+
         <mat-form-field appearance="fill" class="form-group">
           <mat-label>Patient's email*</mat-label>
-          <input matInput placeholder="Enter email">
+          <input matInput placeholder="Enter email" />
         </mat-form-field>
       </div>
-      
+
       <!-- Second row: Date, Time, and Doctor selection -->
       <div class="form-row">
         <mat-form-field appearance="fill" class="form-group">
           <mat-label>Pick a date</mat-label>
-          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            placeholder="Choose a date"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-  
+
         <mat-form-field appearance="fill" class="form-group">
           <mat-label>Pick a time</mat-label>
-          <input matInput placeholder="Choose time">
+          <input matInput placeholder="Choose time" />
           <mat-icon matSuffix>access_time</mat-icon>
         </mat-form-field>
-  
+
         <mat-form-field appearance="fill" class="form-group">
           <mat-label>Select doctor</mat-label>
           <mat-select>
@@ -81,16 +100,19 @@
           </mat-select>
         </mat-form-field>
       </div>
-      
+
       <!-- Third row: Message field -->
       <mat-form-field appearance="fill" class="form-group full-width">
         <mat-label>Your message</mat-label>
         <textarea matInput placeholder="Enter your message"></textarea>
       </mat-form-field>
-      
+
       <!-- Form Footer: Privacy notice and submit button -->
       <div class="form-footer">
-        <p>We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
+        <p>
+          We are committed to protecting your privacy. We will never collect
+          information about you without your explicit consent.
+        </p>
         <button mat-raised-button color="primary">
           <mat-icon>check_circle</mat-icon>
           Book appointment
@@ -98,3 +120,4 @@
       </div>
     </form>
   </div>
+</div>

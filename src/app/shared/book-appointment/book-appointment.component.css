@@ -1,4 +1,8 @@
 /* Book Appointment Section */
+.appointment-section-main{
+  padding: 50px 20px;
+}
+
 .book-appointment-section {
     padding: 50px 20px;
     background-color: #f5fafd;

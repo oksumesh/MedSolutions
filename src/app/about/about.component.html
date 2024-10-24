@@ -104,7 +104,6 @@
     </div>
   </div>
   <!-- High Quality Healthcare Section -->
-  <!-- High Quality Healthcare Section -->
   <div class="healthcare-section container-fluid">
     <div class="row align-items-center">
       <!-- Left Section with Doctor Image and Rating -->
@@ -154,53 +153,22 @@
 
     <!-- Reviews Cards -->
     <div class="row reviews-cards">
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 mb-4"
+        *ngFor="let review of patientReviews"
+      >
         <div class="review-card">
           <img
-            src="assets/patient1.jpg"
-            alt="Jacob"
+            [src]="review.img"
+            [alt]="review.name"
             class="review-img img-fluid"
           />
-          <p>Wonderful surgeon and the staff was helpful.</p>
+          <p>{{ review.comment }}</p>
           <div
             class="review-rating d-flex justify-content-center align-items-center"
           >
             <span class="stars">★★★★★</span>
-            <span class="ms-2">Jacob</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <div class="review-card">
-          <img
-            src="assets/patient2.jpg"
-            alt="Alexa"
-            class="review-img img-fluid"
-          />
-          <p>Doctor is a great experienced and friendly.</p>
-          <div
-            class="review-rating d-flex justify-content-center align-items-center"
-          >
-            <span class="stars">★★★★★</span>
-            <span class="ms-2">Alexa</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <div class="review-card">
-          <img
-            src="assets/patient3.jpg"
-            alt="Michael"
-            class="review-img img-fluid"
-          />
-          <p>The treatment was excellent and the service was top-notch.</p>
-          <div
-            class="review-rating d-flex justify-content-center align-items-center"
-          >
-            <span class="stars">★★★★★</span>
-            <span class="ms-2">Michael</span>
+            <span class="ms-2">{{ review.name }}</span>
           </div>
         </div>
       </div>
