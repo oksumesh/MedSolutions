@@ -1,39 +1,34 @@
 <!-- Contact Us Section -->
-<div class="contact-us-section">
-    <div class="contact-banner">
-      <div class="banner-content">
-        <h4>We are here to help you</h4>
-        <h1>Contact us</h1>
-        <div class="info">
-          <span><mat-icon>local_hospital</mat-icon></span>
-          <div>
-            <h4>Hospital near me</h4>
-            <p>Professional doctor</p>
-          </div>
-        </div>
-      </div>
-      <img src="../../assets/banner.png" alt="Doctor" class="doctor-image" />
-    </div>
-  </div>
+<div class="doctor-section">
+  <app-banner
+    title="Contact Us"
+    subtitle="We are here to help you"
+    icon="local_hospital"
+    infoTitle="Hospital near me"
+    infoSubtitle="Professional doctor"
+    bannerImage="../../assets/banner.png"
+    verifiedText="Hospital near me"
+    verifiedSubtitle="Professional doctor"
+  ></app-banner>
 
   <!-- Contact Info Section -->
-<div class="contact-info-section">
+  <div class="contact-info-section">
     <div class="container">
       <div class="contact-details">
         <div class="contact-item">
           <mat-icon>location_on</mat-icon>
           <h4>Hospital location</h4>
-          <p>27 Eden walk eden center,<br>Orchard view, Paris, France</p>
+          <p>27 Eden walk eden center,<br />Orchard view, Paris, France</p>
         </div>
         <div class="contact-item">
           <mat-icon>email</mat-icon>
           <h4>Email address</h4>
-          <p>infoyourdomain.com<br>hryourdomain.com</p>
+          <p>infoyourdomain.com<br />hryourdomain.com</p>
         </div>
         <div class="contact-item">
           <mat-icon>phone</mat-icon>
           <h4>Let's talk with us</h4>
-          <p>Phone: 1-800-222-000<br>Fax: 1-800-222-002</p>
+          <p>Phone: 1-800-222-000<br />Fax: 1-800-222-002</p>
         </div>
         <div class="contact-item">
           <mat-icon>work</mat-icon>
@@ -42,18 +37,21 @@
         </div>
       </div>
     </div>
-  
+
     <!-- Map Section -->
     <div class="map-container">
-      <iframe src="https://maps.google.com/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" class="map-frame"></iframe>
+      <iframe
+        src="https://maps.google.com/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        frameborder="0"
+        class="map-frame"
+      ></iframe>
     </div>
   </div>
 
   <!-- FAQ and Opening Hours Section -->
-<div class="faq-opening-section">
+  <div class="faq-opening-section">
     <div class="container">
       <div class="faq-opening-grid">
-        
         <!-- FAQ Section -->
         <div class="faq-section">
           <div class="faq-header">
@@ -61,11 +59,14 @@
             <h4>Basic information for patients</h4>
             <h2>We're here to help.</h2>
           </div>
-  
+
           <!-- FAQ Items -->
           <div class="faq-item active">
             <h3>What happens if I need to go to a hospital? <span>−</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
           <div class="faq-item">
             <h3>See your claims, check on coverage and more? <span>+</span></h3>
@@ -74,7 +75,7 @@
             <h3>Easy access more mental health providers? <span>+</span></h3>
           </div>
         </div>
-  
+
         <!-- Opening Hours Section -->
         <div class="opening-hours">
           <div class="hours-header">
@@ -91,3 +92,4 @@
       </div>
     </div>
   </div>
+</div>

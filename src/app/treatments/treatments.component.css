@@ -1,40 +1,6 @@
-.treatments-section {
+/* Treatment Section */
+.treatment-section {
   padding: 50px 20px;
-  background-color: #f5fafd;
-}
-
-.treatment-banner {
-  background-color: #e8f5fe;
-  border-radius: 15px;
-  padding: 40px;
-}
-
-.treatment-banner h1 {
-  font-size: 42px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.treatment-banner h2 {
-  font-size: 18px;
-  color: #00bfa5;
-  margin-bottom: 10px;
-}
-
-.treatment-info mat-icon {
-  color: #ff6f61;
-  font-size: 40px;
-  height: fit-content;
-  width: fit-content;
-}
-
-.treatment-info div {
-  line-height: 1.4;
-}
-
-.doctor-image {
-  max-width: 300px;
-  border-radius: 15px;
 }
 
 /* Clinical Excellence Section */

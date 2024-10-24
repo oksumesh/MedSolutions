@@ -1,0 +1,112 @@
+/* Banner Section */
+.banner-section {
+    padding: 50px 20px;
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5fafd;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .banner-content {
+    max-width: 100%;
+  }
+  
+  .banner h1 {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  
+  .banner h2 {
+    font-size: 18px;
+    color: #00bfa5;
+  }
+  
+  .hospital-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .hospital-info mat-icon {
+    color: #ff6f61;
+    margin-right: 10px;
+    height: fit-content;
+      width: fit-content;
+      font-size: 40px;
+  }
+  
+  .hospital-info div {
+    line-height: 1.4;
+  }
+  
+  /* Doctor Image Styling */
+  .doctor-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  /* Verified Tag Styling */
+  .verified-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .verified-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .icon-and-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .verified-card mat-icon {
+    font-size: 24px;
+    color: #00bfa5;
+    margin-right: 10px;
+  }
+  
+  .verified-text mat-card-content {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .verified-text mat-card-subtitle {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .about-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .doctor-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+  
+    .verified-tag {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }

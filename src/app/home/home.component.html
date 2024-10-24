@@ -7,13 +7,25 @@
         <h1 class="display-4">Most trusted health partner for your life.</h1>
         <p class="lead">Tell us your problem!</p>
         <div class="action-buttons">
-          <button mat-raised-button color="primary" class="btn btn-primary me-2">Find a Doctor</button>
-          <button mat-raised-button color="accent" class="btn btn-accent">Video Call</button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="btn btn-primary me-2"
+          >
+            Find a Doctor
+          </button>
+          <button mat-raised-button color="accent" class="btn btn-accent">
+            Video Call
+          </button>
         </div>
       </div>
       <!-- Image Section -->
       <div class="col-md-6 hero-image text-center">
-        <img src="../../assets/banner.png" alt="Doctor" class="doctor-image img-fluid rounded-circle" />
+        <img
+          src="../../assets/banner.png"
+          alt="Doctor"
+          class="doctor-image img-fluid rounded-circle"
+        />
         <div class="verified-tag position-absolute">
           <mat-card class="verified-card">
             <div class="icon-and-text d-flex align-items-center">
@@ -40,14 +52,14 @@
             class="doctor-group-image img-fluid rounded"
           />
         </div>
-  
+
         <!-- Right side with text and buttons -->
         <div class="col-md-6 about-hospital-text">
           <h2>Welcome to our Medcare hospital.</h2>
           <p>
-            We value each and every human life placed in our hands and constantly
-            work towards meeting the expectations of our customers and
-            stakeholders.
+            We value each and every human life placed in our hands and
+            constantly work towards meeting the expectations of our customers
+            and stakeholders.
           </p>
           <div class="stats">
             <div class="stat-item">
@@ -56,8 +68,16 @@
             </div>
           </div>
           <div class="about-buttons d-flex">
-            <button mat-raised-button color="primary" class="btn btn-primary me-3">About Hospital</button>
-            <button mat-raised-button class="btn btn-outline-primary">Check Timetable</button>
+            <button
+              mat-raised-button
+              color="primary"
+              class="btn btn-primary me-3"
+            >
+              About Hospital
+            </button>
+            <button mat-raised-button class="btn btn-outline-primary">
+              Check Timetable
+            </button>
           </div>
         </div>
       </div>
@@ -85,7 +105,10 @@
               <mat-card>
                 <mat-card-header>General Surgery</mat-card-header>
                 <mat-card-content>
-                  <p>Lorem ipsum is simply dummy text of printing and typesetting industry.</p>
+                  <p>
+                    Lorem ipsum is simply dummy text of printing and typesetting
+                    industry.
+                  </p>
                 </mat-card-content>
                 <mat-card-actions>
                   <button mat-button>Know more</button>
@@ -96,7 +119,10 @@
               <mat-card>
                 <mat-card-header>Blood Test</mat-card-header>
                 <mat-card-content>
-                  <p>Lorem ipsum is simply dummy text of printing and typesetting industry.</p>
+                  <p>
+                    Lorem ipsum is simply dummy text of printing and typesetting
+                    industry.
+                  </p>
                 </mat-card-content>
                 <mat-card-actions>
                   <button mat-button>Know more</button>
@@ -107,7 +133,10 @@
               <mat-card>
                 <mat-card-header>Cardiology</mat-card-header>
                 <mat-card-content>
-                  <p>Lorem ipsum is simply dummy text of printing and typesetting industry.</p>
+                  <p>
+                    Lorem ipsum is simply dummy text of printing and typesetting
+                    industry.
+                  </p>
                 </mat-card-content>
                 <mat-card-actions>
                   <button mat-button>Know more</button>
@@ -117,7 +146,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Stats Section -->
       <div class="row stats mt-5">
         <div class="col-lg-4 col-md-6 col-sm-12 text-center">
@@ -154,30 +183,45 @@
           <p>Make a payment</p>
         </div>
       </div>
-  
+
       <!-- Section title -->
       <h2 class="section-title">Qualified Doctors</h2>
-  
+
       <!-- Doctor Cards -->
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let doctor of doctors">
+        <div
+          class="col-lg-3 col-md-6 col-sm-12 mb-4"
+          *ngFor="let doctor of doctors"
+        >
           <div class="doctor-card">
-            <img [src]="doctor.img" [alt]="doctor.name" class="doctor-img img-fluid" />
+            <img
+              [src]="doctor.img"
+              [alt]="doctor.name"
+              class="doctor-img img-fluid"
+            />
             <h3>{{ doctor.name }}</h3>
-            <p class="specialty">Specialize in <span>{{ doctor.specialty }}</span></p>
+            <p class="specialty">
+              Specialize in <span>{{ doctor.specialty }}</span>
+            </p>
             <div class="rating-badge">
               <mat-icon>star</mat-icon> {{ doctor.rating }}
             </div>
             <p>{{ doctor.description }}</p>
             <div class="social-icons d-flex justify-content-center">
-              <a [href]="doctor.social.facebook" target="_blank"><mat-icon>facebook</mat-icon></a>
-              <a [href]="doctor.social.twitter" target="_blank"><mat-icon>twitter</mat-icon></a>
-              <a [href]="doctor.social.instagram" target="_blank"><mat-icon>instagram</mat-icon></a>
+              <a [href]="doctor.social.facebook" target="_blank"
+                ><mat-icon>facebook</mat-icon></a
+              >
+              <a [href]="doctor.social.twitter" target="_blank"
+                ><mat-icon>twitter</mat-icon></a
+              >
+              <a [href]="doctor.social.instagram" target="_blank"
+                ><mat-icon>instagram</mat-icon></a
+              >
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- Trust section -->
       <div class="trust-section">
         <span class="trust-badge">TRUST</span>

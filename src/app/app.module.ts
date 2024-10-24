@@ -24,6 +24,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatExpansionModule } from '@angular/material/expansion';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import { BookAppointmentComponent } from './shared/book-appointment/book-appointment.component';
+import { BannerComponent } from './shared/banner/banner.component';
 
 
 
@@ -39,7 +40,8 @@ import { BookAppointmentComponent } from './shared/book-appointment/book-appoint
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    BookAppointmentComponent
+    BookAppointmentComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
