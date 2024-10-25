@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+  contactBanner = {
+    title: "Contact Us",
+    subtitle: "We are here to help you",
+    icon: "local_hospital",
+    infoTitle: "Hospital near me",
+    infoSubtitle: "Professional doctor",
+    bannerImage: "../../assets/img/banner/contact-banner.png",
+    verifiedText: "Hospital near me",
+    verifiedSubtitle: "Professional doctor"
+  };
   contactDetails = [
     {
       icon: 'location_on',

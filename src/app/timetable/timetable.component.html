@@ -1,96 +1,57 @@
 <!-- Timetable Section -->
 <div class="timetable-section">
   <div class="hero-section">
-  <app-banner
-    title="Timetable"
-    subtitle="Perfect time for visit"
-    icon="event"
-    infoTitle="Get appointment"
-    infoSubtitle="Special schedule"
-    bannerImage="../../assets/img/home/timetable-banner.png"
-    verifiedText="Get appointment"
-    verifiedSubtitle="Special schedule"
-  ></app-banner>
-</div>
+    <app-banner [bannerData]="timetableBanner"></app-banner>
+  </div>
+  
 
-  <!-- Timetable Section -->
-  <div class="timetable-section">
-    <!-- Filter Menu -->
-    <div class="filter-menu">
-      <button
-        *ngFor="let filter of filters"
-        class="filter-btn"
-        [class.active]="filter === currentFilter"
-        (click)="setFilter(filter)"
-      >
-        {{ filter }}
-      </button>
-    </div>
-
-    <!-- Timetable Table -->
-    <div class="timetable-container">
-      <table class="timetable">
-        <thead>
+  <!-- Filter Menu -->
+  <div class="filter-menu d-flex justify-content-center flex-wrap">
+    <button
+      *ngFor="let filter of filters"
+      class="filter-btn"
+      [class.active]="filter === currentFilter"
+      (click)="setFilter(filter)"
+    >
+      {{ filter }}
+    </button>
+    <div class="timetable-container table-responsive">
+      <table class="table timetable">
+        <thead class="thead-light">
           <tr>
             <th>Time</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
+            <th *ngFor="let day of days">{{ day }}</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let slot of getFilteredTimetable()">
             <td>{{ slot.time }}</td>
-            <td *ngIf="slot.Monday.dept">
-              {{ slot.Monday.dept }}<br /><span>{{ slot.Monday.doctor }}</span>
-            </td>
-            <td *ngIf="slot.Tuesday.dept">
-              {{ slot.Tuesday.dept }}<br /><span>{{
-                slot.Tuesday.doctor
-              }}</span>
-            </td>
-            <td *ngIf="slot.Wednesday.dept">
-              {{ slot.Wednesday.dept }}<br /><span>{{
-                slot.Wednesday.doctor
-              }}</span>
-            </td>
-            <td *ngIf="slot.Thursday.dept">
-              {{ slot.Thursday.dept }}<br /><span>{{
-                slot.Thursday.doctor
-              }}</span>
-            </td>
-            <td *ngIf="slot.Friday.dept">
-              {{ slot.Friday.dept }}<br /><span>{{ slot.Friday.doctor }}</span>
-            </td>
-            <td *ngIf="slot.Saturday.dept">
-              {{ slot.Saturday.dept }}<br /><span>{{
-                slot.Saturday.doctor
-              }}</span>
-            </td>
-            <td *ngIf="slot.Sunday.dept">
-              {{ slot.Sunday.dept }}<br /><span>{{ slot.Sunday.doctor }}</span>
+            <td *ngFor="let day of days">
+              <ng-container *ngIf="slot[day]?.dept">
+                {{ slot[day].dept }}<br />
+                <span>{{ slot[day].doctor }}</span>
+              </ng-container>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+  </div>
 
-    <!-- Contact Section -->
-    <div class="contact-section">
-      <div class="contact-info">
-        <img src="assets/staff.png" alt="Staff Image" class="staff-image" />
-        <p>
-          Please feel free to contact our friendly reception staff with any
-          medical inquiry or call <strong>+1 234 567 8910</strong>
-        </p>
-      </div>
-      <button class="call-btn">
-        <mat-icon>call</mat-icon> +1 234 567 8910
-      </button>
+  <!-- Timetable Table -->
+  
+
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <div class="d-flex align-items-center">
+      <img src="assets/staff.png" alt="Staff Image" class="staff-image" />
+      <p>
+        Please feel free to contact our friendly reception staff with any
+        medical inquiry or call <strong>+1 234 567 8910</strong>
+      </p>
     </div>
+    <button class="call-btn">
+      <mat-icon>call</mat-icon> +1 234 567 8910
+    </button>
   </div>
 </div>

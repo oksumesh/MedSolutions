@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
+  @Input() bannerData: any;
   @Input() title!: string; 
   @Input() subtitle!: string; 
   @Input() icon!: string;

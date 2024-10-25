@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './doctors.component.css'
 })
 export class DoctorsComponent {
+  doctorTeamBanner = {
+    title: "Doctor's team",
+    subtitle: "Specialist doctor team",
+    icon: "home",
+    infoTitle: "Best treatment",
+    infoSubtitle: "Specialist doctor",
+    bannerImage: "../../assets/img/banner/doctors-banner.png",
+    verifiedText: "Best treatment",
+    verifiedSubtitle: "Specialist doctor"
+  };
   doctors = [
     {
       img: 'assets/doc1.jpg',

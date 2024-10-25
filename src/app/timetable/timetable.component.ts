@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './timetable.component.css'
 })
 export class TimetableComponent {
+  days: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   currentFilter: any = 'All Schedule';
   
   // Schedule data for each department and time slot
@@ -16,6 +17,17 @@ export class TimetableComponent {
   ];
 
   filters:any = ['All Schedule', 'Pediatrician', 'Neurology', 'Cardiology', 'Orthopedics'];
+
+  timetableBanner = {
+    title: 'Timetable',
+    subtitle: 'Perfect time for visit',
+    icon: 'event',
+    infoTitle: 'Get appointment',
+    infoSubtitle: 'Special schedule',
+    bannerImage: '../../assets/img/banner/timetable-banner.png',
+    verifiedText: 'Get appointment',
+    verifiedSubtitle: 'Special schedule'
+  };
 
   // Filter the timetable based on the selected department
   getFilteredTimetable() {

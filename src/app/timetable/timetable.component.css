@@ -3,12 +3,10 @@
   padding: 60px 20px;
 }
 
-/* Timetable Section */
-
+/* Filter Menu */
 .filter-menu {
-  display: flex;
-  justify-content: center;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .filter-btn {
@@ -32,9 +30,11 @@
   color: white;
 }
 
-.timetable-container {
+/* Timetable Table */
+.table-responsive {
   overflow-x: auto;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .timetable {
@@ -43,7 +43,8 @@
   text-align: center;
 }
 
-.timetable th, .timetable td {
+.timetable th,
+.timetable td {
   border: 1px solid #ddd;
   padding: 15px;
 }
@@ -75,11 +76,14 @@
   background-color: #f5fafd;
   padding: 20px;
   border-radius: 10px;
+  flex-wrap: wrap;
 }
 
 .contact-info {
   display: flex;
   align-items: center;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .staff-image {
@@ -91,20 +95,53 @@
 
 .contact-info p {
   font-size: 14px;
+  margin: 0;
 }
 
 .call-btn {
   background-color: #333;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   border: none;
   border-radius: 25px;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 180px;
 }
 
 .call-btn mat-icon {
   margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timetable th, .timetable td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 5px 0;
+  }
+
+  .call-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
 }

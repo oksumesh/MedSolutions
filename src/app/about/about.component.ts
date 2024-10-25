@@ -3,11 +3,21 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
 })
 export class AboutComponent {
-   // Patient Reviews Data
-   patientReviews = [
+  aboutBanner = {
+    title: 'About Clinic',
+    subtitle: 'Modern treatment centre',
+    icon: 'home',
+    infoTitle: 'Hospital near me',
+    infoSubtitle: 'Professional doctor',
+    bannerImage: '../../assets/img/banner/about-banner.png',
+    verifiedText: 'Hospital near me',
+    verifiedSubtitle: 'Professional doctor',
+  };
+  // Patient Reviews Data
+  patientReviews = [
     {
       name: 'Jacob',
       comment: 'Wonderful surgeon and the staff was helpful.',

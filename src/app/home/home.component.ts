@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   doctors = [
     {
-      img: 'assets/doc1.jpg',
+      img: 'assets/img/doctors/doc1.png',
       name: 'Dr. Shoko Mugikura',
       specialty: 'psychiatry',
       rating: 4.9,
@@ -20,7 +20,7 @@ export class HomeComponent {
       },
     },
     {
-      img: 'assets/doc2.jpg',
+      img: 'assets/img/doctors/doc2.png',
       name: 'Dr. Herman Miller',
       specialty: 'cancer',
       rating: 4.7,
@@ -32,7 +32,7 @@ export class HomeComponent {
       },
     },
     {
-      img: 'assets/doc3.jpg',
+      img: 'assets/img/doctors/doc3.png',
       name: 'Dr. Leonel Mooney',
       specialty: 'pediatrics',
       rating: 5.0,
@@ -44,7 +44,7 @@ export class HomeComponent {
       },
     },
     {
-      img: 'assets/doc4.jpg',
+      img: 'assets/img/doctors/doc4.png',
       name: 'Dr. Matthew Taylor',
       specialty: 'psychiatry',
       rating: 5.0,

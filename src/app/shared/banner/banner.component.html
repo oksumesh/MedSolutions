@@ -1,26 +1,26 @@
 <!-- Common Banner Component Template (common-banner.component.html) -->
 <div class="banner row align-items-center">
     <div class="banner-content col-lg-6 col-md-6 col-sm-12">
-      <h2>{{ subtitle }}</h2>
-      <h1>{{ title }}</h1>
+      <h2>{{ bannerData.subtitle }}</h2>
+      <h1>{{ bannerData.title }}</h1>
       <div class="hospital-info d-flex align-items-center">
-        <span><mat-icon>{{ icon }}</mat-icon></span>
+        <span><mat-icon>{{ bannerData.icon }}</mat-icon></span>
         <div>
-          <h4>{{ infoTitle }}</h4>
-          <p>{{ infoSubtitle }}</p>
+          <h4>{{ bannerData.infoTitle }}</h4>
+          <p>{{ bannerData.infoSubtitle }}</p>
         </div>
       </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
       <div class="position-relative">
-        <img src="{{ bannerImage }}" alt="Doctor" class="doctor-image img-fluid" />
+        <img src="{{ bannerData.bannerImage }}" alt="Doctor" class="doctor-image img-fluid" />
         <div class="verified-tag position-absolute">
           <mat-card class="verified-card">
             <div class="icon-and-text d-flex align-items-center">
-              <mat-icon>{{icon}}</mat-icon>
+              <mat-icon>{{bannerData.icon}}</mat-icon>
               <div class="verified-text">
-                <mat-card-subtitle>{{ verifiedText }}</mat-card-subtitle>
-                <mat-card-content>{{ verifiedSubtitle }}</mat-card-content>
+                <mat-card-subtitle>{{ bannerData.verifiedText }}</mat-card-subtitle>
+                <mat-card-content>{{ bannerData.verifiedSubtitle }}</mat-card-content>
               </div>
             </div>
           </mat-card>
