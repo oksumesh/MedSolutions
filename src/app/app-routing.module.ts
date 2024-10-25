@@ -7,6 +7,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { ContactComponent } from './contact/contact.component';
 import { BookAppointmentComponent } from './shared/book-appointment/book-appointment.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'doctors', component: DoctorsComponent },
   { path: 'timetable', component: TimetableComponent },
   { path: 'contact', component: ContactComponent },
-  {path:'book-appointment',component:BookAppointmentComponent}
+  {path:'book-appointment',component:BookAppointmentComponent},
+  {path:'loader',component:LoaderComponent}
 ];
 
 @NgModule({

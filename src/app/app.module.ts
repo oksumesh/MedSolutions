@@ -25,6 +25,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import { BookAppointmentComponent } from './shared/book-appointment/book-appointment.component';
 import { BannerComponent } from './shared/banner/banner.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 
 
@@ -41,7 +42,8 @@ import { BannerComponent } from './shared/banner/banner.component';
     HeaderComponent,
     FooterComponent,
     BookAppointmentComponent,
-    BannerComponent
+    BannerComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
