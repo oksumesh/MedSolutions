@@ -1,10 +1,10 @@
 /* Book Appointment Section */
 .appointment-section-main {
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .book-appointment-section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   background-color: #f5fafd;
 }
 
@@ -67,7 +67,7 @@
 
 /* Icon Feature Section */
 .icon-feature-section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   background-color: #fff;
   text-align: center;
 }

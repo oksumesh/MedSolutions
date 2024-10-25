@@ -1,11 +1,15 @@
 /* Footer Section */
+.footer-main{
+    padding: 60px 20px 0px;
+}
 .footer-section {
-    background-color: #001f3f;
-    /* Solid dark blue background */
-    color: white;
-    padding: 60px;
+    color: #333; /* Darker color for text */
+    padding: 60px 20px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    border-radius: 10px;
+    background-color:rgba(234, 244, 247, 0.7); /* Transparent version of #eaf4f7 (70% opacity) */
+    backdrop-filter: blur(10px);
 }
 
 .footer-content {
@@ -24,7 +28,7 @@
 
 .logo img {
     max-width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .footer-links {
@@ -35,15 +39,14 @@
 }
 
 .footer-links a {
-    color: white;
+    color: #333; /* Darker text for links */
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #00d8ff;
-    /* Hover color to match site’s accent color */
+    color: #00bfa5; /* Hover color matching site’s accent */
 }
 
 .social-icons {
@@ -53,49 +56,38 @@
 }
 
 .social-icons a {
-    color: white;
+    color: #333;
     font-size: 24px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #00d8ff;
+    color: #00bfa5;
     transform: scale(1.1);
-    /* Slight zoom on hover */
 }
 
 .copyright {
     display: flex;
     justify-content: space-between;
-    /* Spreads content to both sides */
     align-items: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    /* Subtle divider line */
+    border-top: 1px solid rgba(51, 51, 51, 0.2); /* Slightly darker divider */
     font-size: 14px;
-}
-
-.copyright p {
-    margin: 0;
-    text-align: left;
-    /* Align year to the left */
 }
 
 .terms {
     display: flex;
     gap: 15px;
-    text-align: right;
-    /* Align terms and privacy policy to the right */
 }
 
 .terms a {
-    color: rgba(255, 255, 255, 0.7);
+    color: #666; /* Subtle grey for terms and privacy links */
     font-size: 12px;
     text-decoration: none;
 }
 
 .terms a:hover {
-    color: white;
+    color: #333;
 }
 
 /* Responsive Design */
@@ -103,7 +95,6 @@
     .footer-links {
         flex-direction: column;
         gap: 15px;
-        margin-bottom: 20px;
     }
 
     .copyright {
